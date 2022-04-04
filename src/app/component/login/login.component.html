@@ -1,0 +1,19 @@
+
+<form #loginform="ngForm" (ngSubmit)="loginClient()">
+    <!-- <label for="name">Full Name</label><br>
+    <input id="name" type="text" formControlName="name" [(ngModel)]="client.name" >
+    <br> -->
+    <label for="username">Username</label><br>
+    <input name="username" type="text" [(ngModel)]="client.username"><br>
+
+    <label for="password">Password</label><br>
+    <input name="password" type="password" [(ngModel)]="client.password"><br>
+
+    <small>{{msg}}</small>
+
+    <button type="submit">Login</button><br>
+    <small [routerLink]="['./registration']">New user? Register here</small>
+
+    <!-- <p>Form value: {{registrationForm.value | json}}</p>
+    <p>Form Status: {{registrationForm.status}}</p> -->
+</form>

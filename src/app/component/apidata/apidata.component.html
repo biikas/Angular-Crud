@@ -1,0 +1,59 @@
+<p>apidata works!</p>
+
+<br>
+<a routerLink="add">Add Data</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div>
+    <table class="table">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Api name</th>
+            <th scope="col">Api Data</th>
+
+        </tr>
+        <tr *ngFor="let apidata of apiDatas;let i =index">
+            <td scope="row">{{apidata.id}}</td>
+            <td>{{apidata.api_name}}</td>
+            <td>{{apidata.api_data}}</td>
+            <td><button class="open-button" onclick="openForm()" (click)="edit(apidata)">Edit</button></td>
+        </tr>
+    </table>
+</div>
+
+
+
+
+
+
+<div class="form-popup" id="myForm">
+    <form #updateApi="ngForm" (ngSubmit)="updateData()">
+
+    
+    
+        <label for="api_name">Api name</label><br>
+        <input name="api_name" #api_name type="text"  required [(ngModel)]="apiDataToUpdate.api_name"><br>
+        <br>
+    
+        <label for="api_data">Api Data</label><br>
+        <input name="api_data" #api_data type="text"  required  [(ngModel)]="apiDataToUpdate.api_data"><br>
+    
+        
+    <!-- 
+        <small>{{msg}}</small> -->
+        <br>
+        <button type="submit">Update</button><br>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        <br>
+        </form>
+    
+</div>
+
+
+  
+                

@@ -1,0 +1,19 @@
+
+<form #registrationform="ngForm" (ngSubmit)="registerClient()">
+
+    <label for="name">Full name</label><br>
+    <input name="name" type="text" [(ngModel)]="client.name"><br>
+    
+    <label for="username">Username</label><br>
+    <input name="username" type="text" [(ngModel)]="client.username"><br>
+
+    <label for="password">Password</label><br>
+    <input name="password" type="password" [(ngModel)]="client.password"><br>
+
+    <small>{{msg}}</small>
+
+    <button type="submit">Regist</button><br>
+    <small [routerLink]="['']">Login</small>
+
+    
+</form>

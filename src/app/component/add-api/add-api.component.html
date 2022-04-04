@@ -1,0 +1,24 @@
+<p>add-api works!</p>
+<form #registrationApi="ngForm" (ngSubmit)="registerApi()">
+
+    
+    
+    <label for="api_name">Api name</label><br>
+    <input name="api_name" type="text" [(ngModel)]="apiData.api_name" required><br>
+    <br>
+
+    <label for="api_data">Api Data</label><br>
+    <input name="api_data" type="text" [(ngModel)]="apiData.api_data" required><br>
+
+    
+<!-- 
+    <small>{{msg}}</small> -->
+    <br>
+    <button type="submit">SAVE</button><br>
+    <br>
+
+    <button type="button" (click)="goBack()">go back</button>
+    <!-- <li><a routerLink=".\">Back</a></li> -->
+
+    
+</form>
